@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navigate Your SpaceX Equity With Confidence | Workshops in Waco, TX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #21235F;
+      --navy-deep: #181A4A;
+      --gold: #F6D54E;
+      --gold-soft: #edd587;
+      --teal: #6DCBD4;
+      --white: #FFFFFF;
+      --off-white: #F8F8FB;
+      --light-gray: #EFEFEF;
+      --text: #2D2D3E;
+      --text-light: #5A5A72;
+      --radius: 10px;
+      --shadow: 0 2px 16px rgba(33, 35, 95, 0.08);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    /* ── Utility bar ── */
+    .utility-bar {
+      background: var(--navy-deep);
+      color: var(--gold);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .utility-bar span { color: var(--white); font-weight: 400; }
+
+    /* ── Container ── */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1517976487492-5750f3195933?w=1920&q=80') center center / cover no-repeat;
+      color: var(--white);
+      padding: 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(24, 26, 74, 0.55);
+      z-index: 1;
+    }
+    .hero > .container {
+      position: relative;
+      z-index: 2;
+      padding-top: 80px;
+      padding-bottom: 72px;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(246, 213, 78, 0.15);
+      border: 1px solid rgba(246, 213, 78, 0.3);
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 540px;
+      margin: 0 auto 32px;
+      line-height: 1.5;
+    }
+
+    /* ── CTA Button ── */
+    .cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 20px rgba(246, 213, 78, 0.35);
+      letter-spacing: 0.01em;
+    }
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(246, 213, 78, 0.45);
+    }
+    .cta-note {
+      display: block;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 12px;
+      font-weight: 400;
+    }
+    .cta-note--dark {
+      color: var(--text-light);
+    }
+
+    /* ── Event details strip ── */
+    .event-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--light-gray);
+      padding: 32px 24px;
+    }
+    .event-strip-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .event-detail-icon {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+    .event-detail-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      margin-bottom: 2px;
+    }
+    .event-detail-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+    .event-detail-value small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    /* ── Stats bar ── */
+    .stats-bar {
+      background: var(--navy);
+      padding: 40px 24px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+
+    /* ── Section styles ── */
+    .section {
+      padding: 64px 24px;
+    }
+    .section--white { background: var(--white); }
+    .section--off-white { background: var(--off-white); }
+    .section--navy {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+    .section-label--gold { color: var(--gold); }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-light);
+      max-width: 600px;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+    .section--navy .section-subtitle {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ── Learn grid ── */
+    .learn-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .learn-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: box-shadow 0.2s;
+    }
+    .learn-card:hover { box-shadow: var(--shadow); }
+    .learn-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(33, 35, 95, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+    .learn-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .learn-card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.55;
+    }
+
+    /* ── "Right for you" checklist ── */
+    .checklist {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 32px;
+    }
+    .checklist li {
+      font-size: 0.92rem;
+      padding-left: 28px;
+      position: relative;
+      line-height: 1.45;
+    }
+    .checklist li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    /* ── CTA banner (inline) ── */
+    .cta-banner {
+      text-align: center;
+      padding: 40px 24px;
+      background: var(--off-white);
+      border-top: 1px solid var(--light-gray);
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .cta-banner--navy {
+      background: var(--navy-deep);
+      border: none;
+    }
+
+    /* ── Expect section ── */
+    .expect-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .session-list {
+      list-style: none;
+    }
+    .session-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+    }
+    .session-list li:last-child { border-bottom: none; }
+    .session-label {
+      display: inline-block;
+      background: rgba(246, 213, 78, 0.15);
+      color: var(--gold);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 8px;
+      letter-spacing: 0.04em;
+    }
+    .session-date {
+      color: var(--white);
+      font-weight: 600;
+    }
+    .session-time {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.82rem;
+      display: block;
+      margin-top: 2px;
+      padding-left: 0;
+    }
+    .includes-list {
+      list-style: none;
+    }
+    .includes-list li {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+      padding: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      line-height: 1.45;
+    }
+    .includes-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ── About / Trust ── */
+    .trust-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .trust-point {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 20px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.45;
+    }
+    .trust-point strong {
+      display: block;
+      color: var(--white);
+      margin-bottom: 4px;
+      font-size: 0.88rem;
+    }
+
+    /* ── Instructors ── */
+    .instructor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .instructor-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+    }
+    .instructor-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      overflow: hidden;
+    }
+    .instructor-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .instructor-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .instructor-title {
+      font-size: 0.82rem;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+    .instructor-bio {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.55;
+      text-align: left;
+    }
+
+    /* ── Location ── */
+    .location-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .location-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .location-detail strong {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      margin-bottom: 2px;
+    }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      background: linear-gradient(175deg, var(--navy) 0%, var(--navy-deep) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 72px 24px;
+    }
+    .final-cta h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .final-cta p {
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 32px;
+      font-size: 1rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--navy-deep);
+      color: rgba(255,255,255,0.45);
+      font-size: 0.72rem;
+      padding: 40px 24px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    footer .footer-contact {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.82rem;
+      margin-bottom: 20px;
+    }
+    footer a {
+      color: var(--gold-soft);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .learn-grid { grid-template-columns: 1fr; gap: 16px; }
+      .checklist { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .expect-layout { grid-template-columns: 1fr; gap: 32px; }
+      .trust-points { grid-template-columns: 1fr; }
+      .instructor-grid { grid-template-columns: 1fr; }
+      .event-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .location-bar { flex-direction: column; gap: 16px; text-align: center; }
+      .hero > .container { padding-top: 56px; padding-bottom: 48px; }
+      .section { padding: 48px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Utility Bar ── -->
+  <div class="utility-bar">
+    For SpaceX Employees in the Waco Area &nbsp;·&nbsp; <span>Thursday, Mar 26 or Thursday, Apr 9, 2026</span>
+  </div>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">Free Educational Workshop · Meal Included</div>
+      <h1>Navigate Your SpaceX Equity With <em>Confidence</em></h1>
+      <p class="hero-sub">Your SpaceX compensation is powerful — but only if you understand how it works. Join a focused workshop on ISOs, RSUs, ESPPs, and the tax rules that come with them.</p>
+      <a href="#register" class="cta">Save Your Seat</a>
+      <span class="cta-note">Registration is complimentary · No products will be sold</span>
+    </div>
+  </section>
+
+  <!-- ── Event Details Strip ── -->
+  <div class="event-strip">
+    <div class="event-strip-inner">
+      <div>
+        <div class="event-detail-icon">📅</div>
+        <div class="event-detail-label">Dates</div>
+        <div class="event-detail-value">Mar 26 or Apr 9<small>Two sessions each day</small></div>
+      </div>
+      <div>
+        <div class="event-detail-icon">🕐</div>
+        <div class="event-detail-label">Times</div>
+        <div class="event-detail-value">11:30 AM or 5:00 PM<small>1.5 hours · Meal included</small></div>
+      </div>
+      <div>
+        <div class="event-detail-icon">📍</div>
+        <div class="event-detail-label">Location</div>
+        <div class="event-detail-value">Republic Gun Club<small>19000 Woodway Dr, Woodway, TX</small></div>
+      </div>
+      <div>
+        <div class="event-detail-icon">💰</div>
+        <div class="event-detail-label">Cost</div>
+        <div class="event-detail-value">Complimentary<small>Individuals or couples welcome</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Stats Bar ── -->
+  <div class="stats-bar">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-number">1.5 hrs</div>
+        <div class="stat-label">of education per session</div>
+      </div>
+      <div>
+        <div class="stat-number">950+</div>
+        <div class="stat-label">prior students</div>
+      </div>
+      <div>
+        <div class="stat-number">50+</div>
+        <div class="stat-label">years of instructor experience</div>
+      </div>
+      <div>
+        <div class="stat-number">Zero</div>
+        <div class="stat-label">high-pressure sales pitches</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── What You'll Learn ── -->
+  <section class="section section--off-white">
+    <div class="container">
+      <div class="section-label">What You'll Learn</div>
+      <h2 class="section-title">Understand Your Equity — and Why It's Essential</h2>
+      <p class="section-subtitle">Equity compensation comes with its own vocabulary, tax triggers, and strategic decisions. We translate all of it into plain English.</p>
+
+      <div class="learn-grid">
+        <div class="learn-card">
+          <div class="learn-card-icon">📖</div>
+          <h3>Speak the Language of Equity</h3>
+          <p>ISOs, RSUs, ESPP, AMT, bargain element — we'll translate the terminology into plain English so you can clearly understand your grants, documents, and key decision points.</p>
+        </div>
+        <div class="learn-card">
+          <div class="learn-card-icon">🧾</div>
+          <h3>Anticipate the Tax Impact</h3>
+          <p>Many costly surprises happen because employees don't realize when taxes are triggered. Learn where ordinary income, capital gains, and AMT can arise — and how proactive planning may help.</p>
+        </div>
+        <div class="learn-card">
+          <div class="learn-card-icon">📈</div>
+          <h3>Turn Knowledge Into Strategy</h3>
+          <p>Understanding your equity is the first step. We'll show how these decisions connect to diversification, cash flow, and long-term wealth building — so your compensation works harder for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Is this for you? ── -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-label">Is This Right for You?</div>
+      <h2 class="section-title">This class was designed for SpaceX employees who…</h2>
+      <p class="section-subtitle">Whether you're new to equity or approaching a major decision, this workshop meets you where you are.</p>
+
+      <ul class="checklist">
+        <li>Have stock options, RSUs, or ESPP benefits</li>
+        <li>Are approaching a vesting, exercise, or liquidity decision</li>
+        <li>Want to understand what your equity compensation actually means</li>
+        <li>Are concerned about the tax impact of your equity</li>
+        <li>Have heard of AMT but aren't fully clear how it applies</li>
+        <li>Have significant value tied up in company stock</li>
+        <li>Want to avoid common (and costly) mistakes</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── CTA Banner ── -->
+  <div class="cta-banner">
+    <a href="#register" class="cta">Save Your Seat</a>
+    <span class="cta-note cta-note--dark">Limited seats · Complimentary registration · Meal included</span>
+  </div>
+
+  <!-- ── What To Expect ── -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="section-label section-label--gold">What To Expect</div>
+      <h2 class="section-title">Four Session Options — Pick What Fits Your Schedule</h2>
+      <p class="section-subtitle">Each session covers the same material. Choose the date and time that works best for you.</p>
+
+      <div class="expect-layout">
+        <div>
+          <ul class="session-list">
+            <li>
+              <span class="session-label">Option 1</span>
+              <span class="session-date">Thursday, March 26, 2026</span>
+              <span class="session-time">11:30 AM – 1:00 PM · Lunch included</span>
+            </li>
+            <li>
+              <span class="session-label">Option 2</span>
+              <span class="session-date">Thursday, March 26, 2026</span>
+              <span class="session-time">5:00 PM – 6:30 PM · Dinner included</span>
+            </li>
+            <li>
+              <span class="session-label">Option 3</span>
+              <span class="session-date">Thursday, April 9, 2026</span>
+              <span class="session-time">11:30 AM – 1:00 PM · Lunch included</span>
+            </li>
+            <li>
+              <span class="session-label">Option 4</span>
+              <span class="session-date">Thursday, April 9, 2026</span>
+              <span class="session-time">5:00 PM – 6:30 PM · Dinner included</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="includes-list">
+            <li>Clear visual examples of ISO exercises, AMT, and what you can do in advance</li>
+            <li>Live Q&amp;A to cover your specific questions</li>
+            <li>Light meal included with every session</li>
+            <li>Opportunity to schedule a complimentary one-on-one meeting and receive a personalized Equity Compensation Report</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Who We Are ── -->
+  <section class="section section--navy" style="padding-top: 0;">
+    <div class="container">
+      <div class="section-label section-label--gold">Who We Are</div>
+      <h2 class="section-title">Where Financial Expertise Meets a Personal Touch</h2>
+      <p class="section-subtitle">At Winnow Wealth, we are a team of dedicated professionals united by a passion for financial empowerment. With over 50 years of combined experience, we bring a dynamic and personalized approach to wealth management — guiding individuals, families, and couples at every stage of life. We believe in making your financial goals achievable, one thoughtful decision at a time.</p>
+
+      <div class="trust-points">
+        <div class="trust-point">
+          <strong>Simplicity</strong>
+          Streamlining financial processes for clarity and ease of understanding — like separating the wheat from the chaff
+        </div>
+        <div class="trust-point">
+          <strong>Efficiency</strong>
+          Maximizing effective strategies to achieve optimal results, declutter accounts, and meet your goals
+        </div>
+        <div class="trust-point">
+          <strong>Transparency</strong>
+          Open and clear communication to build trust and empower informed decision-making
+        </div>
+        <div class="trust-point">
+          <strong>Independent &amp; Fiduciary</strong>
+          As a registered investment advisory firm, our advice is objective and always in your interest
+        </div>
+        <div class="trust-point">
+          <strong>No Sales Pitches</strong>
+          This is an educational workshop — no products will be pitched or sold. Just pure, actionable knowledge.
+        </div>
+        <div class="trust-point">
+          <strong>Waco-Based</strong>
+          A local firm that understands the local SpaceX community, not a distant corporate outfit
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Banner ── -->
+  <div class="cta-banner cta-banner--navy">
+    <a href="#register" class="cta">Save Your Seat — It's Free</a>
+    <span class="cta-note">Educational workshop · No obligation · Meal included</span>
+  </div>
+
+  <!-- ── Instructors ── -->
+  <section class="section section--off-white">
+    <div class="container">
+      <div class="section-label">Your Instructors</div>
+      <h2 class="section-title">Meet the People Leading Your Workshop</h2>
+      <p class="section-subtitle">Certified professionals with decades of combined experience in tax, retirement, and equity compensation planning.</p>
+
+      <div class="instructor-grid">
+        <div class="instructor-card">
+          <div class="instructor-photo">
+            <img src="https://winnowwealth.com/wp-content/uploads/2026/02/chad-400x400.png" alt="Chad Castle, RICP®">
+          </div>
+          <div class="instructor-name">Chad Castle, RICP®</div>
+          <div class="instructor-title">Owner, Winnow Wealth LLC</div>
+          <p class="instructor-bio">With over two decades of experience guiding individuals toward their financial aspirations, Chad understands wealth is not just about money — it's about dreams, goals, family, and legacy. Chad has served in the financial services industry since 1995, and teaches retirement planning courses every semester at McLennan Community College. He holds the Retirement Income Certified Professional designation and is a graduate of Baylor University.</p>
+        </div>
+        <div class="instructor-card">
+          <div class="instructor-photo">
+            <img src="https://winnowwealth.com/wp-content/uploads/2026/02/jessica-400x400.png" alt="Jessica Burch, CFP®">
+          </div>
+          <div class="instructor-name">Jessica Burch, CFP®</div>
+          <div class="instructor-title">Co-Founder, Winnow Wealth LLC</div>
+          <p class="instructor-bio">A CERTIFIED FINANCIAL PLANNER™ who co-founded Winnow Wealth, Jessica brings deep tax expertise from years as a Tax Accountant. She holds bachelor's and master's degrees in Business Administration, a Series 65 securities license, and Life, Accident, and Health insurance licenses in several states — combining financial planning and tax knowledge that's especially relevant for equity compensation decisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Location ── -->
+  <section class="section section--white" style="padding: 32px 24px;">
+    <div class="container">
+      <div class="location-bar">
+        <div class="location-detail">
+          <strong>Location</strong>
+          Republic Gun Club · 19000 Woodway Dr, Woodway, TX 76712
+        </div>
+        <div class="location-detail">
+          <strong>Dates</strong>
+          March 26 or April 9, 2026
+        </div>
+        <div class="location-detail">
+          <strong>Cost</strong>
+          Free — meal included
+        </div>
+        <div>
+          <a href="#register" class="cta" style="padding: 12px 28px; font-size: 0.9rem;">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ── -->
+  <section class="final-cta" id="register">
+    <div class="container">
+      <h2>Ready to Take Control of Your Equity?</h2>
+      <p>Registration is quick and easy. Don't miss this complimentary educational opportunity.</p>
+      <a href="#register" class="cta">Save Your Seat Now</a>
+      <span class="cta-note">Complimentary registration · Suitable for individuals or couples</span>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-contact">
+        <a href="https://winnowwealth.com">WinnowWealth.com</a> &nbsp;·&nbsp; (254) 776-8400
+      </div>
+      <p>© 2026 Winnow Wealth, LLC. All Rights Reserved.</p>
+      <br>
+      <p>Winnow Wealth, LLC ("Winnow Wealth") is a Registered Investment Advisor ("RIA"), located in the State of Texas. Winnow Wealth provides investment advisory and related services for clients nationally. Winnow Wealth will maintain all applicable registration and licenses as required by the various states in which Winnow Wealth conducts business, as applicable. Winnow Wealth renders individualized responses to persons in a particular state only after complying with all regulatory requirements, or pursuant to an applicable state exemption or exclusion.</p>
+      <br>
+      <p>Investment advisory services also offered through Brookstone Wealth Advisors (BWA), a registered investment advisor. Winnow Wealth &amp; BWA are independent of each other.</p>
+      <br>
+      <p>This workshop is educational in nature and does not constitute individualized tax or investment advice. Winnow Wealth is not affiliated with, sponsored by, or endorsed by SpaceX, and this event is independently organized and presented by Winnow Wealth for educational purposes.</p>
+      <br>
+      <p>Certified Financial Planner Board of Standards Center for Financial Planning, Inc. owns and licenses the certification marks CFP®, CERTIFIED FINANCIAL PLANNER®, and CFP® (with plaque design) in the United States to Certified Financial Planner Board of Standards, Inc., which authorizes individuals who successfully complete the organization's initial and ongoing certification requirements to use the certification marks.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
