@@ -1,0 +1,67 @@
+<!-- WHAT YOU'LL LEARN -->
+<style>
+  .learn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .learn-card {
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    transition: box-shadow 0.2s;
+  }
+  .learn-card:hover { box-shadow: var(--shadow); }
+  .learn-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(33, 35, 95, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+  .learn-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .learn-card p {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.55;
+  }
+  @media (max-width: 768px) {
+    .learn-grid { grid-template-columns: 1fr; gap: 16px; }
+  }
+</style>
+
+<section class="section section--off-white">
+  <div class="container">
+    <div class="section-label">What You'll Learn</div>
+    <h2 class="section-title">Understand Your Equity and Why It's Essential</h2>
+    <p class="section-subtitle">Equity compensation comes with its own vocabulary, tax triggers, and strategic decisions. Here's what we'll cover.</p>
+
+    <div class="learn-grid">
+      <div class="learn-card">
+        <div class="learn-card-icon">📖</div>
+        <h3>Speak the Language of Equity</h3>
+        <p>ISOs, RSUs, ESPP, AMT, bargain element: we'll translate the terminology into plain English so you can clearly understand your grants, documents, and key decision points.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-card-icon">🧾</div>
+        <h3>Anticipate the Tax Impact</h3>
+        <p>Many costly surprises happen because employees don't realize when taxes are triggered. Learn where ordinary income, capital gains, and AMT can arise, and how proactive planning may help.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-card-icon">📈</div>
+        <h3>Turn Knowledge Into Strategy</h3>
+        <p>Understanding your equity is the first step. We'll show how these decisions connect to diversification, cash flow, and long-term wealth building so your compensation works harder for you.</p>
+      </div>
+    </div>
+  </div>
+</section>

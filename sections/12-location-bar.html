@@ -1,0 +1,47 @@
+<!-- LOCATION BAR -->
+<style>
+  .location-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .location-detail {
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .location-detail strong {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+    margin-bottom: 2px;
+  }
+  @media (max-width: 768px) {
+    .location-bar { flex-direction: column; gap: 16px; text-align: center; }
+  }
+</style>
+
+<section class="section section--white" style="padding: 32px 24px;">
+  <div class="container">
+    <div class="location-bar">
+      <div class="location-detail">
+        <strong>Location</strong>
+        Republic Gun Club · 19000 Woodway Dr, Woodway, TX 76712
+      </div>
+      <div class="location-detail">
+        <strong>Dates</strong>
+        March 26 or April 9, 2026
+      </div>
+      <div class="location-detail">
+        <strong>Cost</strong>
+        Free
+      </div>
+      <div>
+        <a href="#register" class="cta" style="padding: 12px 28px; font-size: 0.9rem;">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+<!-- HERO -->
+<style>
+  .hero {
+    background: url('https://images.unsplash.com/photo-1517976487492-5750f3195933?w=1920&q=80') center center / cover no-repeat;
+    color: var(--white);
+    padding: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(24, 26, 74, 0.55);
+    z-index: 1;
+  }
+  .hero > .container {
+    position: relative;
+    z-index: 2;
+    padding-top: 80px;
+    padding-bottom: 72px;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: rgba(246, 213, 78, 0.15);
+    border: 1px solid rgba(246, 213, 78, 0.3);
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 540px;
+    margin: 0 auto 32px;
+    line-height: 1.5;
+  }
+  @media (max-width: 768px) {
+    .hero > .container { padding-top: 56px; padding-bottom: 48px; }
+  }
+</style>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Free Educational Workshop · Meal Included</div>
+    <h1>Navigate Your SpaceX Equity With <em>Confidence</em></h1>
+    <p class="hero-sub">Your SpaceX compensation is powerful, but only if you understand how it works. Join a focused workshop on ISOs, RSUs, ESPPs, and the tax rules that come with them.</p>
+    <a href="#register" class="cta">Save Your Seat</a>
+    <span class="cta-note">Limited seats available · Free registration</span>
+  </div>
+</section>

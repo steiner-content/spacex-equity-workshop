@@ -1,0 +1,69 @@
+<!-- EVENT DETAILS STRIP -->
+<style>
+  .event-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--light-gray);
+    padding: 32px 24px;
+  }
+  .event-strip-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .event-detail-icon {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+  .event-detail-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+    margin-bottom: 2px;
+  }
+  .event-detail-value {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.35;
+  }
+  .event-detail-value small {
+    display: block;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+  @media (max-width: 768px) {
+    .event-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  }
+</style>
+
+<div class="event-strip">
+  <div class="event-strip-inner">
+    <div>
+      <div class="event-detail-icon">📅</div>
+      <div class="event-detail-label">Dates</div>
+      <div class="event-detail-value">Mar 26 or Apr 9<small>Two sessions each day</small></div>
+    </div>
+    <div>
+      <div class="event-detail-icon">🕐</div>
+      <div class="event-detail-label">Times</div>
+      <div class="event-detail-value">11:30 AM or 5:00 PM<small>1.5 hours · Meal included</small></div>
+    </div>
+    <div>
+      <div class="event-detail-icon">📍</div>
+      <div class="event-detail-label">Location</div>
+      <div class="event-detail-value">Republic Gun Club<small>19000 Woodway Dr, Woodway, TX</small></div>
+    </div>
+    <div>
+      <div class="event-detail-icon">💰</div>
+      <div class="event-detail-label">Cost</div>
+      <div class="event-detail-value">Complimentary<small>Individuals or couples welcome</small></div>
+    </div>
+  </div>
+</div>

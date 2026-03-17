@@ -1,0 +1,113 @@
+<!--
+  GLOBAL STYLES — Paste this into the site-wide header/custom CSS area in GHL.
+  This sets up the font, variables, and shared classes used by all sections.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #21235F;
+    --navy-deep: #181A4A;
+    --gold: #F6D54E;
+    --gold-soft: #edd587;
+    --teal: #6DCBD4;
+    --white: #FFFFFF;
+    --off-white: #F8F8FB;
+    --light-gray: #EFEFEF;
+    --text: #2D2D3E;
+    --text-light: #5A5A72;
+    --radius: 10px;
+    --shadow: 0 2px 16px rgba(33, 35, 95, 0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 20px rgba(246, 213, 78, 0.35);
+    letter-spacing: 0.01em;
+  }
+  .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba(246, 213, 78, 0.45);
+  }
+
+  .cta-note {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.55);
+    margin-top: 12px;
+    font-weight: 400;
+  }
+  .cta-note--dark {
+    color: var(--text-light);
+  }
+
+  .section {
+    padding: 64px 24px;
+  }
+  .section--white { background: var(--white); }
+  .section--off-white { background: var(--off-white); }
+  .section--navy {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+  .section-label--gold { color: var(--gold); }
+
+  .section-title {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  .section--navy .section-subtitle {
+    color: rgba(255,255,255,0.7);
+  }
+
+  @media (max-width: 768px) {
+    .section { padding: 48px 20px; }
+  }
+</style>

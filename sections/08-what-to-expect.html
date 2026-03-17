@@ -1,0 +1,104 @@
+<!-- WHAT TO EXPECT -->
+<style>
+  .expect-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .session-list {
+    list-style: none;
+  }
+  .session-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+  }
+  .session-list li:last-child { border-bottom: none; }
+  .session-label {
+    display: inline-block;
+    background: rgba(246, 213, 78, 0.15);
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    letter-spacing: 0.04em;
+  }
+  .session-date {
+    color: var(--white);
+    font-weight: 600;
+  }
+  .session-time {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.82rem;
+    display: block;
+    margin-top: 2px;
+    padding-left: 0;
+  }
+  .includes-list {
+    list-style: none;
+  }
+  .includes-list li {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.85);
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.45;
+  }
+  .includes-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+    .expect-layout { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
+
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-label section-label--gold">What To Expect</div>
+    <h2 class="section-title">Four Session Options—Pick What Fits Your Schedule</h2>
+    <p class="section-subtitle">Each session covers the same material. Choose the date and time that works best for you.</p>
+
+    <div class="expect-layout">
+      <div>
+        <ul class="session-list">
+          <li>
+            <span class="session-label">Option 1</span>
+            <span class="session-date">Thursday, March 26, 2026</span>
+            <span class="session-time">11:30 AM – 1:00 PM · Lunch included</span>
+          </li>
+          <li>
+            <span class="session-label">Option 2</span>
+            <span class="session-date">Thursday, March 26, 2026</span>
+            <span class="session-time">5:00 PM – 6:30 PM · Dinner included</span>
+          </li>
+          <li>
+            <span class="session-label">Option 3</span>
+            <span class="session-date">Thursday, April 9, 2026</span>
+            <span class="session-time">11:30 AM – 1:00 PM · Lunch included</span>
+          </li>
+          <li>
+            <span class="session-label">Option 4</span>
+            <span class="session-date">Thursday, April 9, 2026</span>
+            <span class="session-time">5:00 PM – 6:30 PM · Dinner included</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="includes-list">
+          <li>Clear visual examples of ISO exercises, AMT, and what you can do in advance</li>
+          <li>Live Q&amp;A to cover your specific questions</li>
+          <li>Light meal included with every session</li>
+          <li>Opportunity to schedule a complimentary one-on-one meeting and receive a personalized Equity Compensation Report</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

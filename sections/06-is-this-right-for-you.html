@@ -1,0 +1,44 @@
+<!-- IS THIS RIGHT FOR YOU? -->
+<style>
+  .checklist {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 32px;
+  }
+  .checklist li {
+    font-size: 0.92rem;
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.45;
+  }
+  .checklist li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    .checklist { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="section-label">Is This Right for You?</div>
+    <h2 class="section-title">This class was designed for SpaceX employees who…</h2>
+    <p class="section-subtitle">Whether you're new to equity or approaching a major decision, this workshop meets you where you are.</p>
+
+    <ul class="checklist">
+      <li>Have stock options, RSUs, or ESPP benefits</li>
+      <li>Are approaching a vesting, exercise, or liquidity decision</li>
+      <li>Want to understand what your equity compensation actually means</li>
+      <li>Are concerned about the tax impact of your equity</li>
+      <li>Have heard of AMT but aren't fully clear how it applies</li>
+      <li>Have significant value tied up in company stock</li>
+      <li>Want to avoid common (and costly) mistakes</li>
+    </ul>
+  </div>
+</section>
