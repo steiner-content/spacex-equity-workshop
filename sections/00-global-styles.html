@@ -110,4 +110,14 @@
   @media (max-width: 768px) {
     .section { padding: 48px 20px; }
   }
+
+  /* Break out of GHL's max-width container for full-bleed sections */
+  .c-section .inner {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .c-column > .inner {
+    padding: 0 !important;
+  }
 </style>
