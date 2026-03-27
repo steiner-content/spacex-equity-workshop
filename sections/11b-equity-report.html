@@ -1,0 +1,61 @@
+<!-- EQUITY COMPENSATION REPORT -->
+<style>
+  .report-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .report-text p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .report-list {
+    list-style: none;
+    padding: 0;
+  }
+  .report-list li {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.45;
+  }
+  .report-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+  .report-image img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  @media (max-width: 768px) {
+    .report-layout { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
+
+<section class="section section--navy">
+  <div class="container">
+    <div class="report-layout">
+      <div class="report-text">
+        <div class="section-label section-label--gold">Bonus: Personalized Analysis</div>
+        <h2 class="section-title">Your Equity Compensation Portfolio Analysis</h2>
+        <p>After the workshop, you'll have the opportunity to schedule a complimentary one-on-one consultation with our team. As part of that meeting, we'll prepare a personalized Equity Compensation Portfolio Analysis tailored specifically to your SpaceX grants.</p>
+        <ul class="report-list">
+          <li>Personalized to your specific equity holdings</li>
+          <li>Clear breakdown of tax implications and timing</li>
+          <li>Prepared by a CFP® professional</li>
+          <li>Completely complimentary, no strings attached</li>
+        </ul>
+      </div>
+      <div class="report-image" style="text-align: center;">
+        <img src="equity-report-mockup.png" alt="Equity Compensation Portfolio Analysis Report Preview">
+      </div>
+    </div>
+  </div>
+</section>
